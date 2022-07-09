@@ -14,5 +14,5 @@ jobs:
     - name: Select Xcode
       run: sudo xcode-select -switch /Applications/Xcode_13.0.app && /usr/bin/xcodebuild -version
     - name: Unit tests
-      run: xcodebuild test -scheme cro_ios -project cro_ios.xcodeproj -destination 'platform=iOS Simulator,name=Any iOS Simulator Device' | xcpretty && exit ${PIPESTATUS[0]}
+      run: xcodebuild test -scheme cro_ios -project cro_ios.xcodeproj -destination "platform=iOS Simulator,name=Any iOS Simulator Device" | xcpretty && exit ${PIPESTATUS[0]}
 
